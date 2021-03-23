@@ -3,7 +3,7 @@
     "author": "AnnAngela",
     "url": "https://www.mediawiki.org/wiki/Extension:SimpleFooterLink",
     "description": "This extension provides a simple way to add any link that system administrators want to footer link area.",
-    "version": "0.1",
+    "version": "0.1.1",
     "license-name": "GPL-2.0-or-later",
     "type": "skin",
     "manifest_version": 2,

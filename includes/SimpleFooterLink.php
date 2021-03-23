@@ -26,7 +26,7 @@ class SimpleFooterLink implements SkinAddFooterLinksHook
      */
     public function onSkinAddFooterLinks(Skin $skin, string $key, array &$footerLinks)
     {
-        if ($key !== 'places') {
+        if ($key !== "places") {
             return;
         }
         global $wgSimpleFooterLinkArray;
@@ -39,8 +39,8 @@ class SimpleFooterLink implements SkinAddFooterLinksHook
                 $footerLink["attr"]["href"] = Skin::makeInternalOrExternalUrl($href);
             }
             $innerHTML = $footerLink["innerHTML"];
-            $encode = mb_detect_encoding($innerHTML, array("ASCII", "UTF-8", "GB2312", "GBK", "BIG5"));
-            $footerLink["innerHTML"] = mb_convert_encoding($innerHTML, 'UTF-8', $encode);
+            $encode = mb_detect_encoding($innerHTML, ["ASCII", "UTF-8", "GB2312", "GBK", "BIG5"]);
+            $footerLink["innerHTML"] = mb_convert_encoding($innerHTML, "UTF-8", $encode);
             $link = Html::rawElement(
                 $footerLink["tag"],
                 $footerLink["attr"],
