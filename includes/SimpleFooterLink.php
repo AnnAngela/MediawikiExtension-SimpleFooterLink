@@ -34,7 +34,7 @@ class SimpleFooterLink implements SkinAddFooterLinksHook
             return;
         }
         foreach ($wgSimpleFooterLinkArray as $footerLink) {
-            if (is_array($footerLink["attr"]) && array_key_exists("href", $footerLink["attr"])) {
+            if ($footerLink["tag"] === "a" && is_array($footerLink["attr"]) && array_key_exists("href", $footerLink["attr"])) {
                 $href = $footerLink["attr"]["href"];
                 $footerLink["attr"]["href"] = Skin::makeInternalOrExternalUrl($href);
             }
